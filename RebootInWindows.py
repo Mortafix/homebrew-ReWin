@@ -1,10 +1,13 @@
-import argparse
-from subprocess import call, run, Popen, PIPE, check_output, CalledProcessError
+#!/usr/bin/env python3
+# Author: Moris Doratiotto
+
+from argparse import ArgumentParser
+from subprocess import call, Popen, PIPE, check_output, CalledProcessError
 from re import search
 
 if __name__ == '__main__':
 	# argparse
-	parser = argparse.ArgumentParser(prog='rewin',description='Reboot in your BootCamp partition easly.',usage='rewin [-n PARTITION-NAME, -p SUDO-PASSWORD]',epilog='Example: rewin -n Windows10 -p NotSoSecurePassword -E')
+	parser = ArgumentParser(prog='rewin',description='Reboot in your BootCamp partition easly.',usage='rewin [-n PARTITION-NAME, -p SUDO-PASSWORD]',epilog='Example: rewin -n Windows10 -p NotSoSecurePassword -E')
 	parser.add_argument('-n',type=str,help='BootCamp partition name',metavar=('NAME'))
 	parser.add_argument('-p',type=str,help='admin password (security issue)',metavar=('PWD'))
 	parser.add_argument('-E','--external-drive',action='store_true',help='BootCamp is in an external drive')

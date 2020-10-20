@@ -1,6 +1,6 @@
 # ReWin
 
-Are you tired of keep pressing the Option button?
+Are you tired of keep pressing the Option button?  
 Python script to reboot automatically your OS to BootCamp.
 
 
